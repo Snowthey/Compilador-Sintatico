@@ -1,0 +1,57 @@
+import java_cup.runtime.*;
+import java.util.*;
+import java.io.*;
+
+parser code {:
+    public void report_error(String message, Object info){
+        System.out.println("Aviso - " + message);
+        System.out.println(info.toString());
+    }
+    
+    public void report_fatal_error(String message, Object info){
+        System.out.println("ERRO - " + message);
+        System.exit(-1);
+    }
+:};
+
+/* Definição dos terminais */
+terminal PROGRAMA, INICIO, FIM, TIPO_INTEIRO, TIPO_DECIMAL, OPERADORESLOGICOS, MULT, MAIOR;
+terminal PTVG, INTEIRO, DECIMAL, VARIAVEL, IGUAL;
+
+
+/* Definição dos não terminais */
+non terminal program, comandos, comando, decl_atrib, expr;
+non terminal decl_variavel, tipo_dado, decl_if;
+
+/* Início */
+start with program;
+
+/* Produções */
+program ::= PROGRAMA INICIO comandos FIM;
+
+comandos ::= comando comandos | comando;
+
+comando ::= decl_variavel
+          | decl_atrib
+          | decl_if;
+
+decl_variavel ::= tipo_dado VARIAVEL PTVG;
+
+tipo_dado ::= TIPO_INTEIRO
+            | TIPO_DECIMAL;
+
+decl_atrib ::= VARIAVEL IGUAL expr PTVG;
+
+expr ::= VARIAVEL 
+       | INTEIRO
+       | DECIMAL
+       | OPERADORESLOGICOS
+       | MULT
+       | MAIOR
+       | IGUAL;
+
+
+decl_if ::= OPERADORESLOGICOS "(" VARIAVEL MAIOR INTEIRO ")" VARIAVEL IGUAL VARIAVEL MULT INTEIRO PTVG ;
+
+
+
