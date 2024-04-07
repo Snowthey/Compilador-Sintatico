@@ -17,8 +17,7 @@ LITERAL = \"[^\"]*\"
 INTEIRO = {DIGITO}+
 DECIMAL = {DIGITO}"."{DIGITO}
 VARIAVEL = {LETRA}+
-
-IGNORE = [\n|\s|\t|\r|"("|")"| ]
+IGNORE = [\n|\s|\t|\r| ]
 %%
 
 <YYINITIAL>{
@@ -31,6 +30,8 @@ IGNORE = [\n|\s|\t|\r|"("|")"| ]
     "if"                    {System.out.println("Token reconhecido: Operador logico"); return new Symbol(Sym.OPERADORESLOGICOS);}
     "*"                     {System.out.println("Token reconhecido: MULT"); return new Symbol(Sym.MULT);}
     ">"                     {System.out.println("Token reconhecido: MAIOR"); return new Symbol(Sym.MAIOR);}
+    "("                     {System.out.println("Token reconhecido: PARENTESESOPEN"); return new Symbol(Sym.PARENTESESOPEN);}
+    ")"                     {System.out.println("Token reconhecido: PARENTESESCLOSE"); return new Symbol(Sym.PARENTESESCLOSE);}
     ";"                     {System.out.println("Token reconhecido: PTVG"); return new Symbol(Sym.PTVG);}
     {INTEIRO}               {System.out.println("Token reconhecido: INTEIRO"); return new Symbol(Sym.INTEIRO);}
     {DECIMAL}               {System.out.println("Token reconhecido: DECIMAL"); return new Symbol(Sym.DECIMAL);}

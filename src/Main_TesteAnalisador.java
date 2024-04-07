@@ -19,8 +19,8 @@ public class Main_TesteAnalisador {
         }
         catch(Exception e){
             System.out.println("Falha geral.");
-            }
         }
     }
+}
 
 

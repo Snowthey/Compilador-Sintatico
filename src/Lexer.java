@@ -33,13 +33,13 @@ public class Lexer implements java_cup.runtime.Scanner {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\5\4\22\0\1\4\1\0\1\0\5\0\2\4\1\22\3\0"+
-    "\1\3\1\0\12\1\1\0\1\24\1\0\1\21\1\23\2\0\32\2"+
-    "\4\0\1\2\1\0\1\11\1\2\1\15\2\2\1\16\1\10\1\2"+
-    "\1\13\2\2\1\20\1\12\1\14\1\7\1\5\1\2\1\6\1\2"+
-    "\1\17\6\2\1\0\1\4\10\0\1\4\32\0\1\4\u15df\0\1\4"+
-    "\u097f\0\13\4\35\0\2\4\5\0\1\4\57\0\1\4\u0fa0\0\1\4"+
-    "\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\ud00f\0";
+    "\11\0\5\4\22\0\1\4\1\0\1\0\5\0\1\24\1\25\1\22"+
+    "\3\0\1\3\1\0\12\1\1\0\1\26\1\0\1\21\1\23\2\0"+
+    "\32\2\4\0\1\2\1\0\1\11\1\2\1\15\2\2\1\16\1\10"+
+    "\1\2\1\13\2\2\1\20\1\12\1\14\1\7\1\5\1\2\1\6"+
+    "\1\2\1\17\6\2\1\0\1\4\10\0\1\4\32\0\1\4\u15df\0"+
+    "\1\4\u097f\0\13\4\35\0\2\4\5\0\1\4\57\0\1\4\u0fa0\0"+
+    "\1\4\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\ud00f\0";
 
   /** 
    * Translates characters to character classes
@@ -53,12 +53,12 @@ public class Lexer implements java_cup.runtime.Scanner {
 
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\1\3\1\4\3\3\1\5\1\6"+
-    "\1\7\1\10\1\2\1\0\2\3\1\11\2\3\1\12"+
-    "\2\3\1\13\1\14\6\3\1\15\1\3\1\16\1\3"+
-    "\1\17";
+    "\1\7\1\10\1\11\1\12\1\2\1\0\2\3\1\13"+
+    "\2\3\1\14\2\3\1\15\1\16\6\3\1\17\1\3"+
+    "\1\20\1\3\1\21";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[35];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -83,14 +83,14 @@ public class Lexer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\25\0\52\0\77\0\25\0\124\0\151\0\176"+
-    "\0\25\0\25\0\25\0\25\0\223\0\250\0\275\0\322"+
-    "\0\77\0\347\0\374\0\25\0\u0111\0\u0126\0\77\0\77"+
-    "\0\u013b\0\u0150\0\u0165\0\u017a\0\u018f\0\u01a4\0\77\0\u01b9"+
-    "\0\77\0\u01ce\0\77";
+    "\0\0\0\27\0\56\0\105\0\27\0\134\0\163\0\212"+
+    "\0\27\0\27\0\27\0\27\0\27\0\27\0\241\0\270"+
+    "\0\317\0\346\0\105\0\375\0\u0114\0\27\0\u012b\0\u0142"+
+    "\0\105\0\105\0\u0159\0\u0170\0\u0187\0\u019e\0\u01b5\0\u01cc"+
+    "\0\105\0\u01e3\0\105\0\u01fa\0\105";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[35];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -114,25 +114,26 @@ public class Lexer implements java_cup.runtime.Scanner {
 
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\2\1\5\1\6\5\4\1\7"+
-    "\2\4\1\10\2\4\1\11\1\12\1\13\1\14\26\0"+
-    "\1\15\1\0\1\16\23\0\1\4\2\0\14\4\6\0"+
-    "\1\4\2\0\1\4\1\17\12\4\6\0\1\4\2\0"+
-    "\7\4\1\20\1\4\1\21\2\4\6\0\1\4\2\0"+
-    "\6\4\1\22\4\4\1\23\5\0\1\15\24\0\1\24"+
-    "\25\0\1\4\2\0\2\4\1\25\11\4\6\0\1\4"+
-    "\2\0\6\4\1\26\3\4\1\27\1\4\6\0\1\4"+
-    "\2\0\5\4\1\30\6\4\6\0\1\4\2\0\2\4"+
-    "\1\31\11\4\6\0\1\4\2\0\3\4\1\32\10\4"+
-    "\6\0\1\4\2\0\10\4\1\33\3\4\6\0\1\4"+
-    "\2\0\4\4\1\34\7\4\6\0\1\4\2\0\1\4"+
-    "\1\35\12\4\6\0\1\4\2\0\6\4\1\36\5\4"+
-    "\6\0\1\4\2\0\12\4\1\37\1\4\6\0\1\4"+
-    "\2\0\4\4\1\40\7\4\6\0\1\4\2\0\2\4"+
-    "\1\41\11\4\6\0\1\4\2\0\5\4\1\42\6\4"+
-    "\6\0\1\4\2\0\4\4\1\43\7\4\4\0";
+    "\2\4\1\10\2\4\1\11\1\12\1\13\1\14\1\15"+
+    "\1\16\30\0\1\17\1\0\1\20\25\0\1\4\2\0"+
+    "\14\4\10\0\1\4\2\0\1\4\1\21\12\4\10\0"+
+    "\1\4\2\0\7\4\1\22\1\4\1\23\2\4\10\0"+
+    "\1\4\2\0\6\4\1\24\4\4\1\25\7\0\1\17"+
+    "\26\0\1\26\27\0\1\4\2\0\2\4\1\27\11\4"+
+    "\10\0\1\4\2\0\6\4\1\30\3\4\1\31\1\4"+
+    "\10\0\1\4\2\0\5\4\1\32\6\4\10\0\1\4"+
+    "\2\0\2\4\1\33\11\4\10\0\1\4\2\0\3\4"+
+    "\1\34\10\4\10\0\1\4\2\0\10\4\1\35\3\4"+
+    "\10\0\1\4\2\0\4\4\1\36\7\4\10\0\1\4"+
+    "\2\0\1\4\1\37\12\4\10\0\1\4\2\0\6\4"+
+    "\1\40\5\4\10\0\1\4\2\0\12\4\1\41\1\4"+
+    "\10\0\1\4\2\0\4\4\1\42\7\4\10\0\1\4"+
+    "\2\0\2\4\1\43\11\4\10\0\1\4\2\0\5\4"+
+    "\1\44\6\4\10\0\1\4\2\0\4\4\1\45\7\4"+
+    "\6\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[483];
+    int [] result = new int[529];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -170,11 +171,11 @@ public class Lexer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\2\1\1\11\3\1\4\11\1\1\1\0"+
+    "\1\0\1\11\2\1\1\11\3\1\6\11\1\1\1\0"+
     "\5\1\1\11\17\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[35];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -274,7 +275,7 @@ public class Lexer implements java_cup.runtime.Scanner {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 154) {
+    while (i < 156) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -633,63 +634,71 @@ public class Lexer implements java_cup.runtime.Scanner {
         case 1: 
           { throw new Error("caracter invalido: "+yytext()+" na linha "+(yyline+1)+", coluna "+(yycolumn+1) );
           }
-        case 16: break;
+        case 18: break;
         case 2: 
           { System.out.println("Token reconhecido: INTEIRO"); return new Symbol(Sym.INTEIRO);
           }
-        case 17: break;
+        case 19: break;
         case 3: 
           { System.out.println("Token reconhecido: VARIAVEL"); return new Symbol(Sym.VARIAVEL);
           }
-        case 18: break;
+        case 20: break;
         case 4: 
           { 
           }
-        case 19: break;
+        case 21: break;
         case 5: 
           { System.out.println("Token reconhecido: IGUAL"); return new Symbol(Sym.IGUAL);
           }
-        case 20: break;
+        case 22: break;
         case 6: 
           { System.out.println("Token reconhecido: MULT"); return new Symbol(Sym.MULT);
           }
-        case 21: break;
+        case 23: break;
         case 7: 
           { System.out.println("Token reconhecido: MAIOR"); return new Symbol(Sym.MAIOR);
           }
-        case 22: break;
-        case 8: 
-          { System.out.println("Token reconhecido: PTVG"); return new Symbol(Sym.PTVG);
-          }
-        case 23: break;
-        case 9: 
-          { System.out.println("Token reconhecido: Operador logico"); return new Symbol(Sym.OPERADORESLOGICOS);
-          }
         case 24: break;
-        case 10: 
-          { System.out.println("Token reconhecido: DECIMAL"); return new Symbol(Sym.DECIMAL);
+        case 8: 
+          { System.out.println("Token reconhecido: PARENTESESOPEN"); return new Symbol(Sym.PARENTESESOPEN);
           }
         case 25: break;
-        case 11: 
-          { System.out.println("Token reconhecido: TIPO_INTEIRO"); return new Symbol(Sym.TIPO_INTEIRO);
+        case 9: 
+          { System.out.println("Token reconhecido: PARENTESESCLOSE"); return new Symbol(Sym.PARENTESESCLOSE);
           }
         case 26: break;
-        case 12: 
-          { System.out.println("Token reconhecido: FIM"); return new Symbol(Sym.FIM);
+        case 10: 
+          { System.out.println("Token reconhecido: PTVG"); return new Symbol(Sym.PTVG);
           }
         case 27: break;
-        case 13: 
-          { System.out.println("Token reconhecido: TIPO_DECIMAL"); return new Symbol(Sym.TIPO_DECIMAL);
+        case 11: 
+          { System.out.println("Token reconhecido: Operador logico"); return new Symbol(Sym.OPERADORESLOGICOS);
           }
         case 28: break;
-        case 14: 
-          { System.out.println("Token reconhecido: INICIO"); return new Symbol(Sym.INICIO);
+        case 12: 
+          { System.out.println("Token reconhecido: DECIMAL"); return new Symbol(Sym.DECIMAL);
           }
         case 29: break;
-        case 15: 
-          { System.out.println("Token reconhecido: PROGRAMA"); return new Symbol(Sym.PROGRAMA);
+        case 13: 
+          { System.out.println("Token reconhecido: TIPO_INTEIRO"); return new Symbol(Sym.TIPO_INTEIRO);
           }
         case 30: break;
+        case 14: 
+          { System.out.println("Token reconhecido: FIM"); return new Symbol(Sym.FIM);
+          }
+        case 31: break;
+        case 15: 
+          { System.out.println("Token reconhecido: TIPO_DECIMAL"); return new Symbol(Sym.TIPO_DECIMAL);
+          }
+        case 32: break;
+        case 16: 
+          { System.out.println("Token reconhecido: INICIO"); return new Symbol(Sym.INICIO);
+          }
+        case 33: break;
+        case 17: 
+          { System.out.println("Token reconhecido: PROGRAMA"); return new Symbol(Sym.PROGRAMA);
+          }
+        case 34: break;
         default: 
           if (zzInput == YYEOF && zzStartRead == zzCurrentPos) {
             zzAtEOF = true;
